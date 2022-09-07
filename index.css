@@ -6,13 +6,18 @@
 }
 
 body{
-    background-color: rgb(63, 62, 62);
+    background-color: black;
 }
 
 .navbar{
-    background-color: white;
+    /* background-color: white; */
     height: 80px;
     padding: 10px;
+    /* position: fixed; */
+    /* width: 100%; */
+    /* z-index: 2; */
+    /* border-bottom: 1px solid whitesmoke; */
+    box-shadow: 0px 0px 5px whitesmoke;
 }
 
 .navbar ul li{
@@ -39,7 +44,54 @@ body{
     margin-top: -10px;
     line-height: 80px;
 }
-.sec1{
+
+.icon-bar{
+    width: 25px;
+    height: 3px;
+    /* color: red; */
+    display: block;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #e19b79;
+    
+}
+/* 
+@media (max-width:768px){
+   .icon-bar{
+    display: none;
+    margin: 320px;
+   } 
+   
+
+} */
+
+
+.coverletter{
+    padding: 10px;
+    /* background-color: blue; */
+    height: 80vh;
+    width: 50vw;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid gold;
+
+}
+
+.coverletter ul li {
+    list-style:none;
+    /* text-decoration: none; */
+    
+}
+
+
+.sec2{
+    display: flex;
+    padding: 10px;
+    
+
+}
+.sec3{
     /* z-index: -2; */
     width: 100%;
     height: 550px;
@@ -49,17 +101,11 @@ body{
     overflow: hidden;
     /* display: flex; */
 }
-.sec2{
-    display: flex;
-    padding: 10px;
-
-}
-
 .overlay-bckgrd{
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: .8;
+    opacity: .9;
     animation: color_change 2s infinite alternate;
 }
  @keyframes color_change {
@@ -86,21 +132,64 @@ body{
         }
  }
 
-
-
-.coverletter{
+.sec4{
+    display: flex;
     padding: 10px;
-    /* background-color: blue; */
-    height: 80vh;
-    width: 50vw;
-    margin: auto;
-    border-radius: 20px;
-    border: 1px solid gold;
+    box-shadow: 0px 0px 5px #e19b79;
+    justify-content: space-evenly;
 
 }
 
-.coverletter ul li {
-    list-style:none;
-    /* text-decoration: none; */
-    
+.msgArea{
+    width: 40%;
 }
+.msgArea input{
+    border: 2px solid #e19b79;
+}
+.msgArea textarea{
+    border: 2px solid #e19b79;
+}
+
+.msgArea button{
+    border: 2px solid #e19b79;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.msgArea button:hover{
+    color: white;
+    background-color: #e19b79;
+
+}
+
+
+
+.sm-logo a {
+    padding: 5px;
+    color: #e19b79;
+}
+
+.sm-logo a i{
+    padding: 5px;
+    color: #e19b79;
+}
+
+.foot div{
+    padding: 5px;
+    text-align: center;
+
+}
+
+/* media queries */
+/* @media (min-width: 768px){ */
+    .navbar{
+        /* width: 100%; */
+    }
+    .sec1{
+        /* width: 100%; */
+    }
+    .logo{
+        /* margin-top: -15vh; */
+    }
+
+/* } */
