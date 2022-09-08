@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&display=swap');
 *{
+    font-family: 'Roboto Slab', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,14 +11,21 @@ body{
     background-color: black;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+}
+
+.logo{
+    padding: 0px 0px 20px 10px;
+    font-size: 48px;
+}
 .navbar{
-    /* background-color: white; */
     height: 80px;
     padding: 10px;
-    /* position: fixed; */
-    /* width: 100%; */
-    /* z-index: 2; */
-    /* border-bottom: 1px solid whitesmoke; */
+    /* column-gap: 1.5rem; */
     box-shadow: 0px 0px 5px whitesmoke;
 }
 
@@ -33,22 +42,22 @@ body{
     font-size: 18px;
     font-weight: 500;
   /* padding: 7px 13px; */
-  border-radius: 3px;
+    border-radius: 3px;
 }
-
-.logo{
-    border-radius: 20px;
-    display: inline-block;
-    /* float: right; */
-    /* padding: 0 100px; */
-    margin-top: -10px;
-    line-height: 80px;
+.navbar ul li a:hover{
+    color: white;
+    transition: 0.3s all linear;
 }
-
+.hamburger{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5px;
+    display: none;
+}
 .icon-bar{
     width: 25px;
     height: 3px;
-    /* color: red; */
     display: block;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -56,16 +65,6 @@ body{
     background-color: #e19b79;
     
 }
-/* 
-@media (max-width:768px){
-   .icon-bar{
-    display: none;
-    margin: 320px;
-   } 
-   
-
-} */
-
 
 .coverletter{
     padding: 10px;
@@ -75,21 +74,50 @@ body{
     margin: auto;
     border-radius: 20px;
     border: 1px solid gold;
-
 }
 
 .coverletter ul li {
     list-style:none;
     /* text-decoration: none; */
-    
 }
-
-
-.sec2{
-    display: flex;
+.sec1{
+    position: relative;
+    width: 100%;
+    /* background-color: white!important; */
+    height: 60vh;
+    max-width: 600px;
+    margin-bottom: 20px;
+    margin: auto;
+    margin-top: 90px;
     padding: 10px;
     
 
+}
+.sec1Home{
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.pic img{
+    border-radius: 45%;
+    border: 1px solid #FF7F32;
+    width: 150px;
+    margin: auto;
+    
+}
+.sec2{
+    display: block;
+    /* padding: 10px; */
+    margin: 10px 0 15px 0px;
+    background-color: #FF7F32;
+    height: 80vh;
+    
+}
+
+.col{
+    background-color: gold!important;
 }
 .sec3{
     /* z-index: -2; */
@@ -132,7 +160,7 @@ body{
         }
  }
 
-.sec4{
+.sec4Contact{
     display: flex;
     padding: 10px;
     box-shadow: 0px 0px 5px #e19b79;
@@ -145,9 +173,12 @@ body{
 }
 .msgArea input{
     border: 2px solid #e19b79;
+    color: black;
 }
 .msgArea textarea{
     border: 2px solid #e19b79;
+    color: black;
+    resize: none;
 }
 
 .msgArea button{
@@ -161,8 +192,6 @@ body{
     background-color: #e19b79;
 
 }
-
-
 
 .sm-logo a {
     padding: 5px;
@@ -181,15 +210,20 @@ body{
 }
 
 /* media queries */
-/* @media (min-width: 768px){ */
-    .navbar{
-        /* width: 100%; */
-    }
-    .sec1{
-        /* width: 100%; */
-    }
-    .logo{
-        /* margin-top: -15vh; */
-    }
 
-/* } */
+@media (max-width: 500px){
+    .navbar-lists{
+        /* display: none; */
+    }
+    .container{
+        flex-direction:row;
+    }
+}
+@media (min-width: 500px){
+    .hamburger{
+        /* display: none;      */
+    }
+    .container{
+        flex-direction:row !important;
+    }
+}
