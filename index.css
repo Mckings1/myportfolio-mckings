@@ -14,46 +14,60 @@ body{
 header{
     position: fixed;
     top: 0;
-    z-index: 200;
+    z-index: 2;
     width: 100%;
 }
 
 .logo{
-    padding: 0px 0px 20px 10px;
-    font-size: 48px;
+    padding: 5px; 
+    /* font-size: 48px; */
+    /* display: inline-block; */
+    margin-top: -30px;
+    
 }
 .navbar{
-    height: 80px;
+    height: 70px;
+    /* line-height: 2vh; */
     padding: 10px;
     /* column-gap: 1.5rem; */
-    box-shadow: 0px 0px 5px whitesmoke;
+    box-shadow: 0px 0px 20px #FF7F32;
+    background-color: whitesmoke;
+    /* align-items: center; */
+    
 }
 
 .navbar ul li{
     list-style: none;
     display: inline-block;
-    margin: 10px;
-    padding: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    /* background-color: red; */
+    /* line-height: 10vh; */
 }
 
 .navbar ul li a{
     text-decoration: none;
-    color: #e19b79;
-    font-size: 18px;
-    font-weight: 500;
+    color: #FF7F32;
+    /* font-size: 18px; */
+    /* font-weight: 500; */
   /* padding: 7px 13px; */
-    border-radius: 3px;
+    /* border-radius: 3px; */
 }
 .navbar ul li a:hover{
-    color: white;
+    color: #e19b79;
     transition: 0.3s all linear;
 }
 .hamburger{
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     row-gap: 5px;
-    display: none;
+    /* display: flex; */
+    /* border: 1px solid #cda79a; */
+    border: none;
+    /* box-shadow: none!important; */
+    display:none ;
+    cursor: pointer;
 }
 .icon-bar{
     width: 25px;
@@ -90,8 +104,6 @@ header{
     margin: auto;
     margin-top: 90px;
     padding: 10px;
-    
-
 }
 .sec1Home{
     position: absolute;
@@ -105,7 +117,6 @@ header{
     border: 1px solid #FF7F32;
     width: 150px;
     margin: auto;
-    
 }
 .sec2{
     display: block;
@@ -161,15 +172,15 @@ header{
  }
 
 .sec4Contact{
-    display: flex;
+    background-color: #32ffce;
+    justify-content: center;    
     padding: 10px;
     box-shadow: 0px 0px 5px #e19b79;
-    justify-content: space-evenly;
-
+    justify-content: space-around;
 }
 
 .msgArea{
-    width: 40%;
+    /* width: 40%; */
 }
 .msgArea input{
     border: 2px solid #e19b79;
@@ -190,7 +201,6 @@ header{
 .msgArea button:hover{
     color: white;
     background-color: #e19b79;
-
 }
 
 .sm-logo a {
@@ -211,19 +221,39 @@ header{
 
 /* media queries */
 
-@media (max-width: 500px){
+@media (max-width: 768px){
+    .hamburger{
+        display: block;     
+    }
+
+    .hamburger.active .icon-bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .icon-bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .icon-bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
     .navbar-lists{
         /* display: none; */
+        position: fixed!important;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: aliceblue;
+        width: 50%;
+        text-align: left;
+        transition: 0.3s;
+
+
     }
-    .container{
-        flex-direction:row;
+    .navbar-lists.active{
+        left: 0;
     }
-}
-@media (min-width: 500px){
-    .hamburger{
-        /* display: none;      */
+
+    .navbar ul li{
+        margin: 16px 0;
     }
-    .container{
-        flex-direction:row !important;
-    }
+    
 }

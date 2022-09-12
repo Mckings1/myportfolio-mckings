@@ -12,10 +12,16 @@
 //     );
 // }
 
-const menu = document.querySelector('.hamburger');
+const hamburger = document.querySelector(".hamburger");
+const navbarlists = document.querySelector(".navbar-lists");
 
-menu.onclick = ()=> {
-  menu.classList.toggle("move");
-}
+  hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navbarlists.classList.toggle("active");
+});  
+
+// menu.onclick = ()=> {
+//   menu.classList.toggle("move");
+// }
 
 
