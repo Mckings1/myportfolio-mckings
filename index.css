@@ -188,9 +188,10 @@ header{
 }
 .front-end{
     background-color: #FF7F32;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     border-radius: 100px;
     color: rgb(0, 0, 0);
+    /* color: white; */
     opacity: .9;
 }
 .wordpress{
@@ -337,5 +338,17 @@ header{
     .navbar ul li{
         margin: 16px 0;
     }
-    
+    .front-end{
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+
+    .wordpress p{
+        text-align: justify;
+    }
+    .design{
+        float: right;
+        margin-right:35vw!important;
+        margin-top: -30px;
+    }
 }

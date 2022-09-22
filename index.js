@@ -20,6 +20,22 @@ const navbarlists = document.querySelector(".navbar-lists");
   navbarlists.classList.toggle("active");
 });  
 
+
+
+// var details = {
+//   name:username.value, phoneNumber:phoneNumber.value, email:email.value, message:msg.value
+// };
+
+// function sendEmail (){
+//   // e.preventDefault();
+//   // console.log(details)
+//   emailjs.send('service_xj5yhml', 'template_y098ol7', details)
+//     .then(function(response) {
+//        console.log('SUCCESS!',response, response.status, response.text);
+//     }, function(error) {
+//        console.log('FAILED...', error);
+//     });
+// }
 // menu.onclick = ()=> {
 //   menu.classList.toggle("move");
 // }

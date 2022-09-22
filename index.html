@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    
+
 </head>
 <body>
     <header>
@@ -43,7 +45,7 @@
                     <img src="img/IMG_0158.JPG" width="" height="100%" alt="">
                 </div>
                 <div class="home-text">
-                    <h3>Hello</h3>
+                    <h5>Hello</h5>
                     <h2>I'm <span>OLUWASEGUN</span></h2>
                     <p>I'm the CEO of this company with a strong passion for building websites of any type. A Full stack developer(Front-end Heavy).</p>
                 </div>
@@ -59,9 +61,8 @@
         <div class="sec2-div1 col-md-12 p-5 col-lg-6 mb-md-2 mb-sm-3 col-xs-12 ">
             <h6 class="mb-4">ABOUT ME</h6>
             <p class="dash"></p>
-            <h2>Front-end Web developer,</h2>
-            <h2>Wordpress Developer & Web </h2>
-            <h2> Designer.</h2>
+            <h2>Front-end Web developer, <br>
+            Wordpress Developer & Web <br> Designer.</h2>
 
 
         </div>
@@ -86,12 +87,7 @@
                 <li><a href="">https://thebuilders.ng/</a></li>
 
             </ul> -->
-            
-           <!-- 
-                
-                Sincerely,
-                [OLUWASEGUN MICHAEL ALABI]        
-            </p> -->
+           
     </div>        
 
 </section>
@@ -102,12 +98,21 @@
         <div class="row sec3-row p-3">
             <!-- <div class="sec3"></div> -->
             <div class="front-end col-md-12 p-5 col-lg-5 mb-md-2 mb-sm-3 col-xs-12">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minima, quod possimus ad dicta dignissimos harum ducimus? Qui minus alias quia, tenetur optio, architecto ratione esse itaque possimus nulla ab nisi! Distinctio fugiat cum accusamus ea possimus unde temporibus molestiae sit nostrum. Ut esse quae, illum libero commodi impedit qui error sed placeat ex adipisci tempora! Numquam rerum necessitatibus ducimus odio quo harum at dolorem eaque placeat, est, tempore accusantium animi sequi maxime cumque et, nisi aperiam laudantium commodi nam.
+
+               <p class="text-white">
+                As a front-end web developer with professional experience, who has worked with a variety of <a href="portfolio.html" class="text-decoration-none text-danger">projects.</a>  I will convert Psd, Figma, Sketch, XD, InDesign, or JPG/PNG files to HTML that is marked up with CSS and responsiveness. 
+                </p>
+               
+               <p class="text-white">
+                To build the website you want, I'll utilize any mix of HTML, CSS, JavaScript. I will code any website, whether it is for commercial, personal, academic, or blog purposes. Given an opportunity, I assure you to give my best. 
+               </p>
+
+               <p class="text-white">My core skills are: HTML/CSS, BOOTSTRAP, TAILWINDCSS, GIT&GITHUB, JAVASCRIPT.</p>
 
 
                 <div class="center mt-3">
                     <div><i class="fa fa-code" aria-hidden="true"></i></i></div>
-                    <div class="#"><h5 class="text-black">Junior Front-end developer</h5></div>
+                    <div class="#"><h5 class="text-white">Junior Front-end developer</h5></div>
                 </div>
                 
             </div>
@@ -118,7 +123,7 @@
                 <p class="text-black"> 
                     With a strong network of professional, educational qualifications, and passion for developing technology – I am sure to deliver positive outcomes as per your organization’s needs. Moreover, I will be available for any kind of future edits and customizations.
                 </p>
-                <p class="text-black">My core skills are: HTML/CSS, PHP, LAREVEL, JAVASCRIPT.</p>
+                <p class="text-black">My core skills are: HTML/CSS, PHP, LARAVEL, JAVASCRIPT.</p>
                 <div class="center mt-3">
                     <div><i class="fa fa-wordpress" aria-hidden="true"></i></div>
                     <div class="#"><h5 class="text-black">Wordpress developer</h5></div>
@@ -131,7 +136,7 @@
 
 <a name="sec4Contact"></a>
 <section class="sec4Contact p-lg-3"> 
-    <form action="mailcontact.php" method="POST"></form>
+    <div>
             <div class="row">
                 <div class="col-md-12 p-5 col-lg-6 mb-md-2 mb-sm-3 col-xs-12" >
                     
@@ -161,15 +166,15 @@
 
                 <div class=" col-md-12 col-lg-6 p-5 col-xs-12 msgArea">
                     <h5 class="" style="color: #e19b79;">GET IN TOUCH</h5>
-                    <input class="mb-2 w-100 p-1" type="text" id="name" name="name" placeholder="Your Name" required> <br>
+                    <input class="mb-2 w-100 p-1" type="text" id="username" name="username" placeholder="Your Name" required> <br>
                     <input class="mb-2 w-100 p-1" type="number" id="phoneNumber" name="phoneNumber" placeholder="Phone Number"> 
                     <input class="mb-2 w-100 p-1" type="email" id="email" name="email" placeholder="Your email"> <br>
-                    <textarea class="mb-2 w-100 p-1" name="" id="msg" name="message" placeholder="Message"  rows="5"></textarea> <br>
-                    <button class="btn p-2" type="submit" onclick="sendEmail(); reset(); return false;">Send Message</button>
+                    <textarea class="mb-2 w-100 p-1" name="" id="msg" name="msg" placeholder="Message"  rows="5"></textarea> <br>
+                    <button class="btn p-2" type="submit" onclick="sendEmail()">Send Message</button>
                 </div>
             
             </div> 
-    </form> 
+        </div> 
 </section>
 
 
@@ -179,8 +184,49 @@
         </div>
         
     </footer>
-    <script src="index.js"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("CMwa9tuiwZQLEtIqJ");
+        })();
+
+        var details = {
+  name:username.value, phoneNumber:phoneNumber.value, email:email.value, message:msg.value
+};
+
+function sendEmail (){
+  // e.preventDefault();
+  // console.log(details)
+       if (phoneNumber.value&&email.value&&msg.value&&username.value) {
+        emailjs.send("service_xj5yhml","template_nqarsvg",{
+        from_name: username.value,
+        // to_name: "gff",
+        message: msg.value,
+        reply_to: "cgcbchc",
+        phone_num:phoneNumber.value,
+        email:email.value
+        }).then(function(response) {
+          
+
+            alert(`Hello ${username.value},\n Your Message was sent successfully. We Will get back to you!!!`)
+            username.value="";
+            msg.value="";
+            phoneNumber.value="";
+            email.value="";
+    //    console.log('SUCCESS!',response, response.status, response.text);
+    }, function(error) {
+       alert("Hey! \n Internal server error")
+    });
+       }else{
+        alert("Please fill all the field")
+       }
+
+
+}
+
+     </script>
+    <script src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
