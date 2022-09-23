@@ -154,7 +154,8 @@ header{
 .sec2-div2{
     /* border: 1px solid #FF7F32; */
     border-radius: 10px;
-    text-align: justify;
+    /* text-align: justify; */
+    
 
 }
 .sec1-portfolio{
@@ -369,12 +370,12 @@ justify-content: space-between;
         margin: 16px 0;
     }
     .front-end{
-        text-align: justify;
+        /* text-align: justify; */
         margin-bottom: 15px;
     }
 
     .wordpress p{
-        text-align: justify;
+        /* text-align: justify; */
     }
     .design{
         float: right;
