@@ -122,9 +122,9 @@ header{
     
     
 }
-.sec1-portfolio{
-    height: 100vh;
-}
+/* .sec1-portfolio{
+    height: 80vh;
+} */
 
 .pic img{
     border-radius: 45%;
@@ -157,16 +157,46 @@ header{
     text-align: justify;
 
 }
-.sec2-portfolio{
+.sec1-portfolio{
     height: 100vh;
     background-image: url(img/bckgrdImg.png);
     background-position: center center;
 
 }
-
-.col{
-    background-color: gold!important;
+.sec2-portfolio{
+    padding: 10px;
+    /* background-color: red; */
+    /* display: flex; */
 }
+.row-skills{
+    display: flex;
+}
+.skills{
+    /* background-color: #32ffce; */
+    padding: 15px;
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    /* grid-row: auto; */
+    
+}
+.skills div img{
+width: 50px;
+justify-content: space-between;
+/* background-color: red; */
+
+}
+
+/* .grid{
+    display: grid;
+    background-color: white;
+    border: 1px solid orange;
+} */
+
+/* .col{
+    background-color: gold!important;
+} */
 .sec3{
     /* z-index: -2; */
     width: 100%;
